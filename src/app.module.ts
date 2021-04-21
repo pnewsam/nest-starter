@@ -2,8 +2,8 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { TasksModule } from './tasks/tasks.module';
-import { Task } from './tasks/tasks.entity';
+import { IngredientsModule } from './ingredients/ingredients.module';
+import { Ingredient } from './ingredients/ingredients.entity';
 
 @Module({
   imports: [
@@ -14,10 +14,10 @@ import { Task } from './tasks/tasks.entity';
       username: 'postgres',
       password: 'postgres',
       database: 'express_starter',
-      entities: [Task],
+      entities: [Ingredient],
       synchronize: true,
     }),
-    TasksModule,
+    IngredientsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

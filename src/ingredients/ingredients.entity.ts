@@ -1,7 +1,7 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class Task {
+export class Ingredient {
   @PrimaryGeneratedColumn('uuid')
   id: number;
 
